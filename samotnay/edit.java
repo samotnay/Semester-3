@@ -15,9 +15,9 @@ import javax.swing.JOptionPane;
  * @author MABESH PROJECT
  */
 public class edit {
-    public void edit (String nim, String nama, String prodi, String alamat, String email, String notelp){
+    public void edit (String nis, String nama, String kelas, String kelamin, String alamat, String email, String notelp){
         try {
-            String sql = "UPDATE Mahasiswa SET nim ='" + nim + "',nama='" + nama + "',prodi='" + prodi + "',alamat='" + alamat + "',email='" + email + "',no_tlp='" + notelp + "' WHERE nim = '" + nim + "'";
+            String sql = "UPDATE `siswasmp` SET `nis` ='"+nis+"',`nama_siswa`='"+nama+"',`kelas`='"+kelas+"',`jenis kelamin`='"+kelamin+"',`alamat`='"+alamat+"',`email`='"+email+"',`notlp`='"+notelp+"' WHERE nis= '"+nis+"'";
             java.sql.Connection conn = (Connection) konfig.configDB();
             java.sql.PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.execute();

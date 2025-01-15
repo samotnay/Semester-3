@@ -15,10 +15,10 @@ import javax.swing.JOptionPane;
  * @author MABESH PROJECT
  */
 public class Insert {
-    public void insert(String nim, String nama, String prodi, String alamat, String email, String notelp){
+    public void insert(String nis, String nama, String kelas, String kelamin, String alamat, String email, String notelp){
         
          try {
-            String sql = "INSERT INTO Mahasiswa VALUES ('" + nim + "','" + nama + "','" + prodi + "','" + alamat + "','" + email + "','" + notelp + "')";
+            String sql = "INSERT INTO siswasmp VALUES ('" + nis + "','" + nama + "','" + kelas + "','" + kelamin + "','" + alamat + "','" + email + "','" + notelp + "')";
             java.sql.Connection conn = (Connection) konfig.configDB();
             java.sql.PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.execute();
@@ -29,4 +29,6 @@ public class Insert {
         }
         
     }
+
+
 }

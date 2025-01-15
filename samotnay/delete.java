@@ -15,9 +15,9 @@ import javax.swing.JOptionPane;
  * @author MABESH PROJECT
  */
 public class delete {
-    public void delete (String nim, String nama, String prodi, String alamat, String email, String notelp){
+    public void delete (String nis, String nama, String kelas, String kelamin, String alamat, String email, String notelp){
         try{
-        String sql = "DELETE FROM Mahasiswa WHERE nim='"+nim+"'";
+        String sql = "DELETE FROM siswasmp WHERE nis='"+nis+"'";
         java.sql.Connection conn = (Connection) konfig.configDB();
             java.sql.PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.execute();
